@@ -7,11 +7,12 @@ import javax.persistence.Persistence;
 public class CreateEmployee {
 	public static void main(String[] args) {
 
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa-example");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa-se");
 
 		EntityManager em = emf.createEntityManager();
 
 		Employee employee = new Employee();
+		employee.setEid( 1201 );
 		employee.setName("Gopal");
 		employee.setSalary(40000);
 		employee.setDeg("Technical Manager");

@@ -11,7 +11,6 @@ import javax.persistence.Table;
 public class Employee {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int eid;
 	private String name;
 	private double salary;

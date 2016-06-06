@@ -2,12 +2,12 @@
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
-    <persistence-unit name="jpa-example" transaction-type="RESOURCE_LOCAL">
+    <persistence-unit name="jpa-se" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>ir.khajavi.Employee</class>
 
         <properties>
-            <property name="hibernate.connection.url" value="jdbc:hsqldb:mem:jpa-se"/>
+            <property name="hibernate.connection.url" value="jdbc:hsqldb:file:jpa-se.sql"/>
             <property name="hibernate.connection.driver_class" value="org.hsqldb.jdbcDriver"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
             <property name="hibernate.hbm2ddl.auto" value="create-drop"/>

@@ -12,7 +12,7 @@ public class CreateEmployee {
 		EntityManager em = emf.createEntityManager();
 
 		Employee employee = new Employee();
-		employee.setEid( 1201 );
+		employee.setEid( 1202 );
 		employee.setName("Gopal");
 		employee.setSalary(40000);
 		employee.setDeg("Technical Manager");

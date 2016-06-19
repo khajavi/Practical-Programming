@@ -1,0 +1,7 @@
+# Run
+
+```
+mvn cargo:deploy
+```
+
+

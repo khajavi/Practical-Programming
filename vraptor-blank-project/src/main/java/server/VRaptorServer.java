@@ -101,7 +101,7 @@ class VRaptorServer {
         if (webHost == null || webHost.isEmpty()) {
             webHost = System.getProperty("server.host", "0.0.0.0");
         }
-        server.getConnectors()[0].setHost(webHost);
+//        server.getConnectors()[0].setHost(webHost);
         server.setAttribute("jetty.host", webHost);
         return server;
     }

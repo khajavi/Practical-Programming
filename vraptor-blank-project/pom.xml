@@ -47,7 +47,14 @@
             </exclusions>
         </dependency>
 
-        <!-- Bean validation for Servlet Containers. -->
+        <!-- Bean Validation API. -->
+        <!-- http://beanvalidation.org/ -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator-cdi</artifactId>
@@ -55,41 +62,45 @@
         </dependency>
 
         <!-- Servlet API -->
-        <!--<dependency>-->
-            <!--<groupId>javax.servlet</groupId>-->
-            <!--<artifactId>jstl</artifactId>-->
-            <!--<version>1.2</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.servlet</artifactId>
+            <version>3.1.1</version>
+        </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>javax.servlet</groupId>-->
-            <!--<artifactId>javax.servlet-api</artifactId>-->
-            <!--<version>3.1.0</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
 
         <!-- JSP -->
+        <!-- https://jsp.java.net/download.html -->
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
         <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>javax.servlet.jsp</artifactId>
             <version>2.2.3</version>
         </dependency>
+
+        <!-- Unified Expression Language (EL) -->
+        <!-- https://uel.java.net/download.html -->
         <dependency>
-            <groupId>de.odysseus.juel</groupId>
-            <artifactId>juel-api</artifactId>
-            <version>2.2.7</version>
+            <groupId>javax.el</groupId>
+            <artifactId>javax.el-api</artifactId>
+            <version>3.0.0</version>
         </dependency>
+
         <dependency>
-            <groupId>de.odysseus.juel</groupId>
-            <artifactId>juel-impl</artifactId>
-            <version>2.2.7</version>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>javax.el</artifactId>
+            <version>2.2.6</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>javax.el</groupId>-->
-            <!--<artifactId>el-api</artifactId>-->
-            <!--<version>2.2</version>-->
-            <!--<scope>provided</scope>-->
-        <!--</dependency>-->
+
 
         <!-- Embedded Jetty Server -->
         <dependency>
@@ -102,26 +113,11 @@
             <artifactId>jetty-webapp</artifactId>
             <version>${jetty.version}</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.eclipse.jetty</groupId>-->
-            <!--<artifactId>jetty-servlet</artifactId>-->
-            <!--<version>${jetty.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.eclipse.jetty</groupId>-->
-            <!--<artifactId>jetty-servlets</artifactId>-->
-            <!--<version>${jetty.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.eclipse.jetty</groupId>-->
-            <!--<artifactId>jetty-http</artifactId>-->
-            <!--<version>${jetty.version}</version>-->
-        <!--</dependency>-->
 
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.5</version>
+            <version>1.7.16</version>
         </dependency>
     </dependencies>
 

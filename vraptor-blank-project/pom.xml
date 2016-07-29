@@ -12,7 +12,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <weld.version>2.1.2.Final</weld.version>
-        <jetty.version>8.1.14.v20131031</jetty.version>
+        <!--<jetty.version>8.1.14.v20131031</jetty.version>-->
+        <jetty.version>9.3.9.v20160517</jetty.version>
     </properties>
 
     <dependencies>
@@ -27,24 +28,12 @@
             <groupId>org.jboss.weld.servlet</groupId>
             <artifactId>weld-servlet-core</artifactId>
             <version>${weld.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.jboss.spec.javax.el</groupId>
-                    <artifactId>jboss-el-api_3.0_spec</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>
             <groupId>org.jboss.weld</groupId>
             <artifactId>weld-core-impl</artifactId>
             <version>${weld.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.jboss.spec.javax.el</groupId>
-                    <artifactId>jboss-el-api_3.0_spec</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <!-- Bean Validation API. -->
@@ -101,7 +90,6 @@
             <version>2.2.6</version>
         </dependency>
 
-
         <!-- Embedded Jetty Server -->
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
@@ -114,6 +102,7 @@
             <version>${jetty.version}</version>
         </dependency>
 
+        <!-- Logging Framework -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>

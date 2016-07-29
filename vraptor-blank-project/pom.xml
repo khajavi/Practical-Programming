@@ -12,6 +12,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <weld.version>2.1.2.Final</weld.version>
+        <jetty.version>8.1.14.v20131031</jetty.version>
     </properties>
 
     <dependencies>
@@ -20,17 +21,12 @@
             <artifactId>vraptor</artifactId>
             <version>4.1.2</version>
         </dependency>
-        <dependency>
-            <groupId>br.com.caelum.vraptor</groupId>
-            <artifactId>vraptor-routes</artifactId>
-            <version>4.1.0-RC3</version>
-        </dependency>
 
         <!-- CDI implementation for Servlet Container -->
         <dependency>
             <groupId>org.jboss.weld.servlet</groupId>
             <artifactId>weld-servlet-core</artifactId>
-            <version>2.2.0.CR2</version>
+            <version>${weld.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.jboss.spec.javax.el</groupId>
@@ -42,7 +38,7 @@
         <dependency>
             <groupId>org.jboss.weld</groupId>
             <artifactId>weld-core-impl</artifactId>
-            <version>2.2.0.CR2</version>
+            <version>${weld.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.jboss.spec.javax.el</groupId>
@@ -88,38 +84,38 @@
             <artifactId>juel-impl</artifactId>
             <version>2.2.7</version>
         </dependency>
-        <dependency>
-            <groupId>javax.el</groupId>
-            <artifactId>el-api</artifactId>
-            <version>2.2</version>
-            <scope>provided</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>javax.el</groupId>-->
+            <!--<artifactId>el-api</artifactId>-->
+            <!--<version>2.2</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
 
         <!-- Embedded Jetty Server -->
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
-            <version>8.1.0.v20120127</version>
+            <version>${jetty.version}</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-webapp</artifactId>
-            <version>8.1.0.v20120127</version>
+            <version>${jetty.version}</version>
         </dependency>
         <!--<dependency>-->
             <!--<groupId>org.eclipse.jetty</groupId>-->
             <!--<artifactId>jetty-servlet</artifactId>-->
-            <!--<version>8.1.0.v20120127</version>-->
+            <!--<version>${jetty.version}</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
             <!--<groupId>org.eclipse.jetty</groupId>-->
             <!--<artifactId>jetty-servlets</artifactId>-->
-            <!--<version>8.1.0.v20120127</version>-->
+            <!--<version>${jetty.version}</version>-->
         <!--</dependency>-->
         <!--<dependency>-->
             <!--<groupId>org.eclipse.jetty</groupId>-->
             <!--<artifactId>jetty-http</artifactId>-->
-            <!--<version>8.1.0.v20120127</version>-->
+            <!--<version>${jetty.version}</version>-->
         <!--</dependency>-->
 
         <dependency>
